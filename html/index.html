@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportX Store - Mua sắm thể thao</title>
+
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../CSS/index.css   ">
+    <!--fa -->
+      <link rel="apple-touch-icon" sizes="57x57" href="/imgs/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/imgs/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/imgs/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/imgs/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/imgs/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/imgs/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/imgs/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/imgs/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/imgs/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/imgs/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/imgs/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <header class="custom-header d-flex align-items-center">
+        <div class="d-flex align-items-center">
+            <div class="dropdown">
+                <a class="category-btn d-flex align-items-center" href="#" id="categoryDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
+                    <i class="bi bi-list category-icon"></i>
+                    <span>Danh mục</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="categoryDropdown">
+                    <li><a class="dropdown-item dropdown-item-custom dropdown-item-all-products" href="#">Tất cả sản
+                            phẩm</a></li>
+                    <li>
+                        <hr class="dropdown-divider dropdown-divider-custom">
+                    </li>
+                    <li><a class="dropdown-item dropdown-item-custom" href="/html/sanpham1.html">Quần áo bóng đá<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom" href="/html/sanpham2.html">Giày bóng đá<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom"  href="/html/sanpham4.html">Bóng đá | Phụ kiện<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom"  href="/html/sanpham3.html">Cầu lông<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom" href="/html/sanpham5.html">Giày thể thao<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom" href="/html/sanpham6.html">Đá cầu và cầu mây<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom" href="/html/sanpham7.html">Quần áo thể thao nam<span
+                                class="item-arrow">›</span></a></li>
+                </ul>
+            </div>
+
+               <a href="?"><img src="/imgs/favicon.jpg" class="img-fluid m-1" style="height: 50px;" alt=""></a>
+        </div>
+
+        <div class="search-container-full position-relative" id="fullSearchContainer">
+            <i class="bi bi-search search-icon-inside"></i>
+            <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm...">
+            <button class="close-search-btn" id="closeSearchBtn">&times;</button>
+        </div>
+
+        <div class="ms-auto d-flex align-items-center icon-container" id="iconContainer">
+            <a class="nav-link search-icon-btn" id="searchIconBtn">
+                <i class="bi bi-search" style="font-size: 1.2rem;"></i>
+            </a>
+
+            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <i class="bi bi-person" style="font-size: 1.4rem;"></i>
+            </a>
+
+            <a class="nav-link cart-icon" onclick="switchTab('cart')">
+                <i class="bi bi-bag" style="font-size: 1.2rem;"></i>
+                <!-- <span class="cart-badge">3</span> -->
+            </a>
+        </div>
+    </header>
+
+
+
+    <div id="home" class="page active">
+
+        <div class="banner-container mt-3">
+            <img src="../IMG/Nen.avif" alt="" class="img-fluid w-100"
+                style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); height: 400px;">
+        </div>
+
+        <div class="features mt-4">
+            <div class="feature-box">
+                <h3>GIAO HÀNG TOÀN QUỐC</h3>
+                <p>Tiết kiệm chi phí mua & giao hàng</p>
+            </div>
+            <div class="feature-box">
+                <h3>THANH TOÁN COD</h3>
+                <p>Tiện lợi, an toàn, trả tiền khi nhận</p>
+            </div>
+            <div class="feature-box">
+                <h3>HỖ TRỢ BẢO HÀNH</h3>
+                <p>An tâm mua sắm với dịch vụ tận tâm</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Sản Phẩm Bán Chạy</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../IMG/wc-2026-canada.jpg" alt="Bóng">
+                <div class="product-name">Áo bóng đá WC 2026 - Canada</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/wc-2026-dan-mach.jpg" alt="Bóng">
+                <div class="product-name">Áo bóng đá WC 2026 - Đan Mạch</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/wc-2026-phap.jpg" alt="Bóng">
+                <div class="product-name">Áo bóng đá WC 2026 - Pháp</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/wc-2026-uc.jpg" alt="Bóng">
+                <div class="product-name">Áo bóng đá WC 2026 - Úc</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/giay-wika-tt-red.jpg" alt="Giày">
+                <div class="product-name">Giày thể thao wika</div>
+                <div class="product-price">115.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/giay-wika-navy.jpg" alt="Bóng">
+                <div class="product-name">Giày thể thao wika</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+
+            <div class="product-card">
+                <img src="../IMG/giay-wika-db.jpg" alt="Bóng">
+                <div class="product-name">Giày đá bóng wika</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/giay-wika-db-den.jpg" alt="Bóng">
+                <div class="product-name">Giày đá bóng wika</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/tui-dung-vot-yonex.jpg" alt="Bóng">
+                <div class="product-name">Túi đựng vợt Yonex</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/bong-chuyen-vtv.jpg" alt="Bóng">
+                <div class="product-name">Bóng Chuyền VTV Cup</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/quan-ao-db-te-mc.jpg" alt="Quần áo">
+                <div class="product-name">Quần áo bóng đá trẻ em</div>
+                <div class="product-price">69.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/vot-pickleball-dat.jpg" alt="Vợt">
+                <div class="product-name">Vợt Pickleball Adidas Metalbone</div>
+                <div class="product-price">2.399.000₫</div>
+                <button class="btn-custom" style="background-color:#999;">Hết hàng</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="cart" class="page">
+        <h2 class="section-title mt-4">Giỏ hàng của bạn</h2>
+        <div class="cart-container">
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <tr>
+                            <td>
+                                <div class="cart-item-img"></div>
+                                <strong>Bóng Chuyền VTV Cup</strong>
+                            </td>
+                            <td>335.000₫</td>
+                            <td><input type="number" class="qty-input" value="1" min="1" onchange="updateTotal()"></td>
+                            <td class="item-total" data-price="335000">335.000₫</td>
+                            <td><a href="#" class="text-danger text-decoration-none">Xóa</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cart-item-img"></div>
+                                <strong>Giày thể thao bata Asia</strong>
+                            </td>
+                            <td>115.000₫</td>
+                            <td><input type="number" class="qty-input" value="1" min="1" onchange="updateTotal()"></td>
+                            <td class="item-total" data-price="115000">115.000₫</td>
+                            <td><a href="#" class="text-danger text-decoration-none">Xóa</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cart-item-img"></div>
+                                <strong>Quần áo bóng đá trẻ em</strong>
+                            </td>
+                            <td>69.000₫</td>
+                            <td><input type="number" class="qty-input" value="2" min="1" onchange="updateTotal()"></td>
+                            <td class="item-total" data-price="69000">138.000₫</td>
+                            <td><a href="#" class="text-danger text-decoration-none">Xóa</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cart-summary">
+                <p class="mb-1">Tổng tiền tạm tính:</p>
+                <div class="total-price" id="final-total">588.000₫</div>
+                <button class="btn-custom" style="width: auto;"
+                    onclick="alert('Chuyển hướng đến trang thanh toán an toàn...')">Tiến Hành Thanh Toán</button>
+            </div>
+        </div>
+    </div> -->
+
+    <footer>
+        <div class="g1">
+            <p>© 2026 SportX SPORT</p>
+            <p>Email: nhom13web@gmail.com | Hotline: 099 999 9999</p>
+        </div>
+        <div class="g2">
+            <p>Facebook: <a href="">www.facebook.SportX.com</a></p>
+            <p>Zalo: <a href=""> zalo.SportX</a>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="loginModalLabel">ĐĂNG NHẬP</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- <form>
+                        <div class="mb-3">
+                            <label class="form-label">Tên đăng nhập / Gmail</label>
+                            <input type="text" class="form-control" placeholder="Nhập tên đăng nhập hoặc email">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" placeholder="Nhập mật khẩu">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Đăng Nhập</button>
+                    </form> -->
+
+                    <form id="loginForm" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label">Tên đăng nhập / Gmail <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="loginUsername"
+                                placeholder="Nhập tên đăng nhập hoặc email" required>
+                            <div class="invalid-feedback">Vui lòng nhập tên đăng nhập hoặc email.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mật khẩu <span class="text-danger">*</span></label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Nhập mật khẩu"
+                                required>
+                            <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Đăng Nhập</button>
+                    </form>
+
+
+
+                    <div class="text-center mt-3">
+                        <span>Bạn chưa có tài khoản? </span>
+                        <a href="#" class="text-primary text-decoration-none fw-bold" data-bs-toggle="modal"
+                            data-bs-target="#registerModal" data-bs-dismiss="modal">Đăng ký ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="registerModalLabel">ĐĂNG KÝ TÀI KHOẢN</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Tên đăng nhập</label>
+                                <input type="text" class="form-control" placeholder="Nhập tên đăng nhập">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Gmail</label>
+                                <input type="email" class="form-control" placeholder="abc@gmail.com">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Mật khẩu</label>
+                                <input type="password" class="form-control" placeholder="Nhập mật khẩu">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Xác nhận mật khẩu</label>
+                                <input type="password" class="form-control" placeholder="Nhập lại mật khẩu">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Số điện thoại</label>
+                                <input type="number" class="form-control" placeholder="Nhập số điện thoại">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Ngày sinh</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label d-block">Giới tính</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="genderNam" value="nam"
+                                    checked>
+                                <label class="form-check-label" for="genderNam">Nam</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="genderNu" value="nu">
+                                <label class="form-check-label" for="genderNu">Nữ</label>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Hủy</button>
+                            <button type="submit" class="btn btn-primary px-4">Đăng Ký Ngay</button>
+                        </div>
+                    </form> -->
+
+
+                    <form id="registerForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Tên đăng nhập <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="regUsername"
+                                    placeholder="Nhập tên đăng nhập" required minlength="5">
+                                <div class="invalid-feedback">Tên đăng nhập phải có ít nhất 5 ký tự.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Gmail <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="regEmail" placeholder="abc@gmail.com"
+                                    required>
+                                <div class="invalid-feedback">Vui lòng nhập đúng định dạng email.</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Mật khẩu <span class="text-danger">*</span></label>
+                                <input type="password" class="form-control" id="regPassword" placeholder="Nhập mật khẩu"
+                                    required minlength="6">
+                                <div class="invalid-feedback">Mật khẩu phải có ít nhất 6 ký tự.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Xác nhận mật khẩu <span class="text-danger">*</span></label>
+                                <input type="password" class="form-control" id="regConfirmPassword"
+                                    placeholder="Nhập lại mật khẩu" required>
+                                <div class="invalid-feedback">Mật khẩu xác nhận không khớp.</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Số điện thoại <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" id="regPhone" placeholder="Nhập số điện thoại"
+                                    required pattern="^(0[3|5|7|8|9])([0-9]{8})$" maxlength="10"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                                <!-- gõ một ký tự không phải là số (chữ cái, ký tự đặc biệt), nó sẽ bị xóa đi. -->
+                                <div class="invalid-feedback">Số điện thoại không hợp lệ (phải gồm 10 số và bắt đầu bằng
+                                    0).</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Ngày sinh <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="regDob" required>
+                                <div class="invalid-feedback">Vui lòng chọn ngày sinh.</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label d-block">Giới tính</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="genderNam" value="nam"
+                                    checked>
+                                <label class="form-check-label" for="genderNam">Nam</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="genderNu" value="nu">
+                                <label class="form-check-label" for="genderNu">Nữ</label>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Hủy</button>
+                            <button type="submit" class="btn btn-primary px-4">Đăng Ký Ngay</button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        <span>Đã có tài khoản? </span>
+                        <a href="#" class="text-primary text-decoration-none fw-bold" data-bs-toggle="modal"
+                            data-bs-target="#loginModal" data-bs-dismiss="modal">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // // 1. Chuyển đổi giữa trang chủ và giỏ hàng
+        // function switchTab(tabId) {
+        //     document.querySelectorAll('.page').forEach(page => {
+        //         page.classList.remove('active');
+        //     });
+        //     document.getElementById(tabId).classList.add('active');
+        //     window.scrollTo({ top: 0, behavior: 'smooth' });
+        // }
+
+        // // 2. Tính tổng tiền giỏ hàng
+        // function updateTotal() {
+        //     let grandTotal = 0;
+        //     const rows = document.querySelectorAll('#cart-items tr');
+
+        //     rows.forEach(row => {
+        //         const price = parseInt(row.querySelector('.item-total').getAttribute('data-price'));
+        //         const qty = parseInt(row.querySelector('.qty-input').value);
+        //         const itemTotal = price * qty;
+
+        //         row.querySelector('.item-total').innerText = itemTotal.toLocaleString('vi-VN') + '₫';
+        //         grandTotal += itemTotal;
+        //     });
+
+        //     document.getElementById('final-total').innerText = grandTotal.toLocaleString('vi-VN') + '₫';
+        // }
+
+        // 3. Ẩn/hiện thanh tìm kiếm trên Header
+        document.getElementById('searchIconBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('fullSearchContainer').classList.add('active');
+            document.getElementById('iconContainer').classList.remove('d-flex');
+            document.getElementById('iconContainer').classList.add('d-none');
+            document.querySelector('.search-input').focus(); // Tự động focus con trỏ vào ô nhập
+        });
+
+        document.getElementById('closeSearchBtn').addEventListener('click', function () {
+            document.getElementById('fullSearchContainer').classList.remove('active');
+            document.getElementById('iconContainer').classList.remove('d-none');
+            document.getElementById('iconContainer').classList.add('d-flex');
+        });
+
+        // RÀNG BUỘC DỮ LIỆU (VALIDATION) CHO FORM
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // 1. Xử lý Form Đăng Nhập
+            const loginForm = document.getElementById('loginForm');
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Ngăn chặn load lại trang
+
+                if (!loginForm.checkValidity()) {
+                    event.stopPropagation();
+                } else {
+                    alert("Đăng nhập thành công!");
+                    window.location.href = 'index_out.html';
+                    bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide();
+                }
+                loginForm.classList.add('was-validated');
+            });
+
+            // 2. Xử lý Form Đăng Ký
+            const registerForm = document.getElementById('registerForm');
+            const passwordInput = document.getElementById('regPassword');
+            const confirmPasswordInput = document.getElementById('regConfirmPassword');
+
+            // Hàm kiểm tra mật khẩu xác nhận có khớp không
+            function validatePasswordMatch() {
+                if (passwordInput.value !== confirmPasswordInput.value) {
+                    confirmPasswordInput.setCustomValidity("Mật khẩu không khớp");
+                } else {
+                    confirmPasswordInput.setCustomValidity(""); // Hợp lệ
+                }
+            }
+
+            // Kiểm tra realtime khi gõ mật khẩu
+            passwordInput.addEventListener('input', validatePasswordMatch);
+            confirmPasswordInput.addEventListener('input', validatePasswordMatch);
+
+            registerForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Ngăn chặn load lại trang
+                validatePasswordMatch(); // Check lại lần cuối trước khi submit
+
+                if (!registerForm.checkValidity()) {
+                    event.stopPropagation();
+                } else {
+                    alert("Đăng ký tài khoản thành công!");
+                    bootstrap.Modal.getInstance(document.getElementById('registerModal')).hide();
+                }
+                registerForm.classList.add('was-validated');
+            });
+
+            // Xóa trạng thái lỗi khi modal đóng lại (để lần mở sau form sạch sẽ)
+            const modals = ['loginModal', 'registerModal'];
+            modals.forEach(modalId => {
+                document.getElementById(modalId).addEventListener('hidden.bs.modal', function () {
+                    const form = this.querySelector('form');
+                    form.reset(); // Xóa trắng dữ liệu
+                    form.classList.remove('was-validated'); // Xóa viền đỏ/xanh
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

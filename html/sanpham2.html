@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- bs+css -->
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/imgs/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/imgs/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/imgs/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/imgs/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/imgs/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/imgs/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/imgs/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/imgs/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/imgs/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/imgs/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/imgs/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+      
+    </style>
+</head>
+<body>
+       <!-- HEader -->
+        
+      <header class="custom-header d-flex align-items-center">
+        <div class="d-flex align-items-center">
+            <div class="dropdown">
+                <a class="category-btn d-flex align-items-center" href="#" id="categoryDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
+                    <i class="bi bi-list category-icon"></i>
+                    <span class="">Danh mục</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="categoryDropdown">
+                    <li><a class="dropdown-item dropdown-item-custom dropdown-item-all-products " href="#">Tất cả sản
+                            phẩm</a></li>
+                    <li>
+                        <hr class="dropdown-divider dropdown-divider-custom">
+                    </li>
+                  <li><a class="dropdown-item dropdown-item-custom " href="/html/sanpham1.html">Quần áo bóng đá<span
+                                class="item-arrow ">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom " href="/html/sanpham2.html">Giày bóng đá<span
+                                class="item-arrow ">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom " href="/html/sanpham4.html">Bóng đá | Phụ kiện<span
+                                class="item-arrow ">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom " href="/html/sanpham3.html">Cầu lông<span
+                                class="item-arrow ">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom " href="/html/sanpham5.html">Giày thể thao<span
+                                class="item-arrow ">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom " href="/html/sanpham6.html">Đá cầu và cầu mây<span
+                                class="item-arrow ">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom "  href="/html/sanpham7.html">Quần áo thể thao nam<span
+                                class="item-arrow ">›</span></a></li>
+                </ul>
+            </div>
+
+           
+                 <a href="?"><img src="/imgs/favicon.jpg" class="img-fluid m-1 " style="height: 50px;" alt=""></a>
+            
+        </div>
+
+       
+
+       <div class="search-container-full position-relative  justify-content-end" id="fullSearchContainer">
+            <i class="bi bi-search search-icon-inside"></i>
+            <input type="text" class="search-input w-25 " placeholder="Tìm kiếm sản phẩm...">
+            <button class="close-search-btn" id="closeSearchBtn">&times;</button>
+        </div>
+        
+
+        <div class="ms-auto d-flex align-items-center icon-container" id="iconContainer">
+            <a class="nav-link search-icon-btn" id="searchIconBtn">
+                <i class="bi bi-search  " ></i>
+            </a>
+
+           
+            <div class="dropdown">
+                <a class="nav-link p-0" id="triggerId" data-bs-toggle="dropdown">
+                    <i class="bi bi-person  text-white"></i>
+                </a>
+
+                 <ul class="dropdown-menu dropdown-menu-end">
+                     <li>
+                        <div class="dropdown-item dropdown-item-custom text-muted">
+                            <strong>Xin chào, Khách!</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider dropdown-divider-custom">
+                    </li>
+                    <li>
+                        <a class="dropdown-item dropdown-item-custom" href="index.html">
+                            <i class="bi bi-box-arrow-right me-2"></i> Đăng xuất
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <a class="nav-link cart-icon" onclick="switchTab('cart')" href="/html/giohang.html">
+                <i class="bi bi-bag  "></i>
+                <!-- <span class="cart-badge">3</span> -->
+            </a>
+        </div>
+    </header>
+    <div class="container ">
+        <!--  -->
+       
+       <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item "><a href="#">Trang chủ</a></li>
+            <li class="breadcrumb-item active " aria-current="page">giày bóng đá</li>
+        </ol>
+        </nav>
+    <div class="bg-white p-3 rounded-3 shadow-sm border">
+    <h6 class="fw-bold mb-3 ">Chọn tiêu chí</h6>
+    <!-- Size -->
+    <button
+        type="button"
+        class="btn "
+        data-bs-toggle="modal"
+        data-bs-target="#modalId"
+    >
+       <i class="bi bi-funnel p-2 rounded-3 border-2 shadow-sm bg-light " >Bộ lọc</i>
+    </button>
+    <div
+        class="modal fade"
+        id="modalId"
+        tabindex="-1"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        
+        role="dialog"
+        aria-labelledby="modalTitleId"
+        aria-hidden="true"
+    >
+        <div
+            class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
+            role="document"
+        >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title " id="modalTitleId">
+                       Bộ lọc
+                    </h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+  <h5 class=" ">Size</h5>
+  <div class="row">
+    <div class="col" >
+      <input type="checkbox" class="btn-check" id="S" autocomplete="off">
+      <label class="btn btn-outline-primary rounded-pill px-4  " for="S">39</label>
+    </div>
+    <div class="col">
+      <input type="checkbox" class="btn-check" id="M" autocomplete="off">
+      <label class="btn btn-outline-primary rounded-pill px-4 " for="M">40</label>
+    </div>
+    <div class="col">
+      <input type="checkbox" class="btn-check" id="L" autocomplete="off">
+      <label class="btn btn-outline-primary rounded-pill px-4 " for="L">41</label>
+    </div>
+
+    
+      <div class="col">
+      <input type="checkbox" class="btn-check" id="XL" autocomplete="off">
+      <label class="btn btn-outline-primary rounded-pill px-4 " for="XL">42</label>
+    </div>
+    <div class="col">
+      <input type="checkbox" class="btn-check" id="XXL" autocomplete="off">
+      <label class="btn btn-outline-primary rounded-pill px-4 " for="XXL">43</label>
+    </div>
+    <div class="col">
+      <input type="checkbox" class="btn-check" id="3Xl" autocomplete="off">
+      <label class="btn btn-outline-primary rounded-pill px-4 " for="3Xl">44</label>
+    </div>
+    </div>
+</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary   rounded-pill" data-bs-dismiss="modal">
+                        đóng
+                    </button>
+                    <button type="button" class="btn btn-primary  rounded-pill" data-bs-dismiss="modal"> tìm kiếm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    
+        
+    </div>
+     <div class="bg-white p-3 rounded-3 shadow-sm border mt-2">
+            <h5 class="fw-bold mb-3">Quần áo thể thao nam</h5>
+            <div class="container-fluid mt-3">
+                <ul class="nav nav-pills gap-2 mt-3">
+                    <li class="nav-item">
+                        <a class="nav-link active bg-light text-dark rounded-pill" href="?">hãng nike</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bg-light text-dark rounded-pill" href="?">hãng adiadas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bg-light text-dark rounded-pill" href="?">hãng puma</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+        <h3 class="p-3 fw-bold"> Sản phẩm hiện có</h3>
+    <div class="bg-white p-3 rounded-3 shadow-sm border mt-2">
+        <h5 class="fw-bold mb-3">Quần áo Bóng đá</h5>
+        <div class="row m-lg-3">
+            <div class="col-3 ">
+                <div class="card" >
+                  <img src="/imgs/giay/giay1.jpeg" class="card-img-top " alt="..." >
+                  <div class="card-body">
+                    <h5 class="card-title">NK Vapor 16 Elite cổ cao - Tím</h5>
+                    <p class="text-danger  text-center fw-bold">225000</p>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="col-3 ">
+                <div class="card" >
+                  <img src="/imgs/giay/giay2.jpeg" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">NKVapor 16 Elite-Ngọc hồng</h5>
+                    <p class="text-danger  text-center fw-bold">335000</p>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" >
+                  <img src="/imgs/giay/giay3.jpeg" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">giày bóng đá NKVapor 16 Elite - Vàng</h5>
+                   <p class="text-danger  text-center fw-bold">195000</p>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="col-3 ">
+                <div class="card" >
+                  <img src="/imgs/giay/giay4.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Giày bóng đá F1 NK Vapor 16 Elite</h5>
+                   <p class="text-danger  text-center fw-bold">395000</p>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+        </div>
+    <div class="row m-lg-3">
+            <div class="col-3 ">
+                <div class="card" >
+                  <img src="/imgs/giay/giay5.jpeg" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Giày bóng đá bata ráp đế - Trắng viền hồng</h5>
+                    <p class="text-danger  text-center fw-bold">335000</p>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="col-3 ">
+                <div class="card" >
+                  <img src="/imgs/giay/giay6.jpeg" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Giày Bata Ráp đế - Trắng viền Hồng nhạt</h5>
+                    <p class="text-danger  text-center fw-bold">335000</p>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" >
+                  <img src="/imgs/giay/giay7.jpeg" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Giày bóng đá Winbro Predator-Xanh dương</h5>
+                    <p class="text-danger  text-center fw-bold">335000</p>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="col-3 ">
+                <div class="card" >
+                  <img src="/imgs/giay/giay8.jpeg" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Winbro Messi X Crazyfast - Xanh ngọc</h5>
+                    <p class="text-danger  text-center fw-bold">335000</p>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-lg-3">
+            <div class="col-3 ">
+                <div class="card" >
+                  <img src="/imgs/giay/giay9.jpeg" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"> Winbro X CrazyFast - Trắng xanh chuối</h5>
+                   <p class="text-danger  text-center fw-bold">335000</p>
+                  <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="col-3 ">
+                <div class="card" >
+                  <img src="/imgs/giay/giay10.jpeg" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Giày bóng đá Winbro F50 - Xanh viền Hồng</h5>
+                    <p class="text-danger  text-center fw-bold">335000</p>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" >
+                  <img src="/imgs/giay/giay11.jpeg" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Giày bóng đá Winbro Predator - Trắng
+</h5>
+                   <p class="text-danger  text-center fw-bold">335000</p>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="col-3 ">
+                <div class="card" >
+                  <img src="/imgs/giay/giay12.jpeg" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Giày bóng đá Winbro Predator - Xanh chuối</h5>
+                    <p class="text-danger  text-center fw-bold">335000</p>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient">
+                    <a href="" class=" text-decoration-none  fw-bold " >Chọn mua</a></button>
+                    <button class="btn btn-primary w-100 rounded-3 p-2 bg-gradient mt-3">
+                    <a href="" class=" text-decoration-none  fw-bold " >thêm vào vỏ hàng</a></button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>
+<footer>
+        <div class="g1">
+            <p class="">© 2026 SportX SPORT</p>
+            <p class="">Email: nhom13web@gmail.com | Hotline: 099 999 9999</p>
+        </div>
+        <div class="g2">
+            <p class="">Facebook: <a href="">www.facebook.SportX.com</a></p>
+            <p class="">Zalo: <a href=""> zalo.SportX</a>
+        </div>
+</footer>
+
+     
+
+    
+ <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="/JS/sanpham.js"></script>
+</body>
+</html>

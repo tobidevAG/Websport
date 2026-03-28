@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportX Store - Mua sắm thể thao</title>
+
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../CSS/index.css   ">
+</head>
+
+<body>
+
+    <header class="custom-header d-flex align-items-center">
+        <div class="d-flex align-items-center">
+            <div class="dropdown">
+                <a class="category-btn d-flex align-items-center" href="#" id="categoryDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
+                    <i class="bi bi-list category-icon"></i>
+                    <span>Danh mục</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="categoryDropdown">
+                    <li><a class="dropdown-item dropdown-item-custom dropdown-item-all-products" href="#">Tất cả sản
+                            phẩm</a></li>
+                    <li>
+                        <hr class="dropdown-divider dropdown-divider-custom">
+                    </li>
+                       <li><a class="dropdown-item dropdown-item-custom" href="/html/sanpham1.html">Quần áo bóng đá<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom" href="/html/sanpham2.html">Giày bóng đá<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom"  href="/html/sanpham4.html">Bóng đá | Phụ kiện<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom"  href="/html/sanpham3.html">Cầu lông<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom" href="/html/sanpham5.html">Giày thể thao<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom" href="/html/sanpham6.html">Đá cầu và cầu mây<span
+                                class="item-arrow">›</span></a></li>
+                    <li><a class="dropdown-item dropdown-item-custom" href="/html/sanpham7.html">Quần áo thể thao nam<span
+                                class="item-arrow">›</span></a></li>
+                </ul>
+            </div>
+
+   <a href="?"><img src="/imgs/favicon.jpg" class="img-fluid m-1 " style="height: 50px;" alt=""></a>
+        </div>
+
+        <div class="search-container-full position-relative" id="fullSearchContainer">
+            <i class="bi bi-search search-icon-inside"></i>
+            <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm...">
+            <button class="close-search-btn" id="closeSearchBtn">&times;</button>
+        </div>
+
+        <div class="ms-auto d-flex align-items-center icon-container" id="iconContainer">
+            <a class="nav-link search-icon-btn" id="searchIconBtn">
+                <i class="bi bi-search" style="font-size: 1.2rem;"></i>
+            </a>
+
+            <!-- <div class="dropdown">
+                <a href="#" class="nav-link" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person" style="font-size: 1.4rem;"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom" aria-labelledby="userDropdown">
+                    <li>
+                        <div class="dropdown-item dropdown-item-custom text-muted">
+                            <strong>Xin chào, Khách!</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider dropdown-divider-custom">
+                    </li>
+                    <li>
+                        <a class="dropdown-item dropdown-item-custom" href="#" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            <i class="bi bi-box-arrow-in-right me-2"></i> Đăng xuất
+                        </a>
+                    </li>
+            </div> -->
+
+
+            <div class="dropdown">
+                <a href="#" class="nav-link" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person" style="font-size: 1.4rem;"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom" aria-labelledby="userDropdown">
+                    <li>
+                        <div class="dropdown-item dropdown-item-custom text-muted">
+                            <strong>Xin chào, Khách!</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider dropdown-divider-custom">
+                    </li>
+                    <li>
+                        <a class="dropdown-item dropdown-item-custom" href="index.html">
+                            <i class="bi bi-box-arrow-right me-2"></i> Đăng xuất
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <a class="nav-link cart-icon" onclick="switchTab('cart')">
+                <i class="bi bi-bag" style="font-size: 1.2rem;"></i>
+                <!-- <span class="cart-badge">3</span> -->
+            </a>
+        </div>
+    </header>
+
+
+
+    <div id="home" class="page active">
+
+        <div class="banner-container mt-3">
+            <img src="../IMG/Nen.avif" alt="" class="img-fluid w-100"
+                style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); height: 400px;">
+        </div>
+
+        <div class="features mt-4">
+            <div class="feature-box">
+                <h3>GIAO HÀNG TOÀN QUỐC</h3>
+                <p>Tiết kiệm chi phí mua & giao hàng</p>
+            </div>
+            <div class="feature-box">
+                <h3>THANH TOÁN COD</h3>
+                <p>Tiện lợi, an toàn, trả tiền khi nhận</p>
+            </div>
+            <div class="feature-box">
+                <h3>HỖ TRỢ BẢO HÀNH</h3>
+                <p>An tâm mua sắm với dịch vụ tận tâm</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Sản Phẩm Bán Chạy</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../IMG/wc-2026-canada.jpg" alt="Bóng">
+                <div class="product-name">Áo bóng đá WC 2026 - Canada</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/wc-2026-dan-mach.jpg" alt="Bóng">
+                <div class="product-name">Áo bóng đá WC 2026 - Đan Mạch</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/wc-2026-phap.jpg" alt="Bóng">
+                <div class="product-name">Áo bóng đá WC 2026 - Pháp</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/wc-2026-uc.jpg" alt="Bóng">
+                <div class="product-name">Áo bóng đá WC 2026 - Úc</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/giay-wika-tt-red.jpg" alt="Giày">
+                <div class="product-name">Giày thể thao wika</div>
+                <div class="product-price">115.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/giay-wika-navy.jpg" alt="Bóng">
+                <div class="product-name">Giày thể thao wika</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+
+            <div class="product-card">
+                <img src="../IMG/giay-wika-db.jpg" alt="Bóng">
+                <div class="product-name">Giày đá bóng wika</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/giay-wika-db-den.jpg" alt="Bóng">
+                <div class="product-name">Giày đá bóng wika</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/tui-dung-vot-yonex.jpg" alt="Bóng">
+                <div class="product-name">Túi đựng vợt Yonex</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/bong-chuyen-vtv.jpg" alt="Bóng">
+                <div class="product-name">Bóng Chuyền VTV Cup</div>
+                <div class="product-price">335.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/quan-ao-db-te-mc.jpg" alt="Quần áo">
+                <div class="product-name">Quần áo bóng đá trẻ em</div>
+                <div class="product-price">69.000₫</div>
+                <button class="btn-custom">Chọn Mua</button>
+                <button class="btn-custom">Thêm giỏ hàng</button>
+            </div>
+            <div class="product-card">
+                <img src="../IMG/vot-pickleball-dat.jpg" alt="Vợt">
+                <div class="product-name">Vợt Pickleball Adidas Metalbone</div>
+                <div class="product-price">2.399.000₫</div>
+                <button class="btn-custom" style="background-color:#999;">Hết hàng</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="g1">
+            <p>© 2026 SportX SPORT</p>
+            <p>Email: nhom13web@gmail.com | Hotline: 099 999 9999</p>
+        </div>
+        <div class="g2">
+            <p>Facebook: <a href="">www.facebook.SportX.com</a></p>
+            <p>Zalo: <a href=""> zalo.SportX</a>
+        </div>
+    </footer>
+
+
+
+
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+
+        // 3. Ẩn/hiện thanh tìm kiếm trên Header
+        document.getElementById('searchIconBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('fullSearchContainer').classList.add('active');
+            document.getElementById('iconContainer').classList.remove('d-flex');
+            document.getElementById('iconContainer').classList.add('d-none');
+            document.querySelector('.search-input').focus(); // Tự động focus con trỏ vào ô nhập
+        });
+
+        document.getElementById('closeSearchBtn').addEventListener('click', function () {
+            document.getElementById('fullSearchContainer').classList.remove('active');
+            document.getElementById('iconContainer').classList.remove('d-none');
+            document.getElementById('iconContainer').classList.add('d-flex');
+        });
+
+        // RÀNG BUỘC DỮ LIỆU (VALIDATION) CHO FORM
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // 1. Xử lý Form Đăng Nhập
+            const loginForm = document.getElementById('loginForm');
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Ngăn chặn load lại trang
+
+                if (!loginForm.checkValidity()) {
+                    event.stopPropagation();
+                } else {
+                    alert("Đăng nhập thành công!");
+                    bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide();
+                }
+                loginForm.classList.add('was-validated');
+            });
+
+            // 2. Xử lý Form Đăng Ký
+            const registerForm = document.getElementById('registerForm');
+            const passwordInput = document.getElementById('regPassword');
+            const confirmPasswordInput = document.getElementById('regConfirmPassword');
+
+            // Hàm kiểm tra mật khẩu xác nhận có khớp không
+            function validatePasswordMatch() {
+                if (passwordInput.value !== confirmPasswordInput.value) {
+                    confirmPasswordInput.setCustomValidity("Mật khẩu không khớp");
+                } else {
+                    confirmPasswordInput.setCustomValidity(""); // Hợp lệ
+                }
+            }
+
+            // Kiểm tra realtime khi gõ mật khẩu
+            passwordInput.addEventListener('input', validatePasswordMatch);
+            confirmPasswordInput.addEventListener('input', validatePasswordMatch);
+
+            registerForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Ngăn chặn load lại trang
+                validatePasswordMatch(); // Check lại lần cuối trước khi submit
+
+                if (!registerForm.checkValidity()) {
+                    event.stopPropagation();
+                } else {
+                    alert("Đăng ký tài khoản thành công!");
+                    bootstrap.Modal.getInstance(document.getElementById('registerModal')).hide();
+                }
+                registerForm.classList.add('was-validated');
+            });
+
+            // Xóa trạng thái lỗi khi modal đóng lại (để lần mở sau form sạch sẽ)
+            const modals = ['loginModal', 'registerModal'];
+            modals.forEach(modalId => {
+                document.getElementById(modalId).addEventListener('hidden.bs.modal', function () {
+                    const form = this.querySelector('form');
+                    form.reset(); // Xóa trắng dữ liệu
+                    form.classList.remove('was-validated'); // Xóa viền đỏ/xanh
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

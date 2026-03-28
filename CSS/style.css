@@ -1,0 +1,40 @@
+ img {
+     height: 300px;
+ }
+
+ .card-body p {
+     color: #e03f3f !important;
+
+ }
+
+ .card-body button {
+     background-color: #d3e3fd !important;
+
+ }
+
+ button a {
+     color: #0045AE !important;
+ }
+
+ .card-body button:hover {
+     background-color: blue !important;
+
+ }
+
+ .card-body button:hover a {
+     color: white !important;
+ }
+
+ .dropdown:hover .dropdown-menu {
+     display: block;
+     margin-top: 0;
+ }
+
+ .card {
+     transition: 0.3s ease;
+ }
+
+ .card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ }
